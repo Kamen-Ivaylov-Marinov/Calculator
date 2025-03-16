@@ -1,0 +1,49 @@
+def addition(a, b):
+    result = a + b
+    return f"{a} + {b} = {result}"
+
+
+def subtraction(a, b):
+    result = a - b
+    return f"{a} - {b} = {result}"
+
+
+def multiplication(a, b):
+    result = a * b
+    return f"{a} * {b} = {result}"
+
+
+def division(a, b):
+    result = a / b
+    if b == 0:
+        return f"You can't divide by 0"
+    else:
+        return f"{a} / {b} = {result:.2f}"
+
+
+def menu():
+
+    while True:
+        print(f"Please select your option:")
+        print(f"0. Exit\n"
+              "1. Addition\n"
+              "2. Subtraction\n"
+              "3. Multiplication\n"
+              "4. Division\n")
+
+        command = int(input("Enter your choice: "))
+
+        if command == 0:
+            print("Exit")
+            break
+        elif command == 1:
+            print(addition(float(input("a = ")), float(input("b = "))))
+        elif command == 2:
+            print(subtraction(float(input("a = ")), float(input("b = "))))
+        elif command == 3:
+            print(multiplication(float(input("a = ")), float(input("b = "))))
+        elif command == 4:
+            print(division(float(input("a = ")), float(input("b = "))))
+
+
+menu()
